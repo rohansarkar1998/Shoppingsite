@@ -20,11 +20,6 @@
         <version>3.2.1</version>
         <configuration>
           <warSourceDirectory>WebContent</warSourceDirectory>
-          <archive>
-            <mainfest>
-              <mainClass>com.OnlineShopping.CustomerBean</mainClass>
-            </mainfest>
-          </archive>
         </configuration>
       </plugin>
     </plugins>
