@@ -1,0 +1,28 @@
+-
+ name: Create Docker Image
+ hosts: localhost
+ become: yes
+ tasks:
+
+    - name: stopping container
+      shell: docker stop shopping
+      ignore_errors: yes
+
+    - name: delete container
+      shell: docker rm shopping
+      ignore_errors: yes
+      
+    - name: delete image
+      shell: docker rmi shopping
+      ignore_errors: yes
+      
+    - name: create image from .war
+      shell: docker build -t rohansarkar007/shopping .
+#      shell: docker build -t ecomapp .
+    
+    - name: Push Docker Image to Docker hub
+      shell: docker push rohansarkar007/ecomapp
+     
+        #    - name: create container from image
+        #      shell: docker run -d --name ecomapp -p 8082:8080 ecomapp
+     

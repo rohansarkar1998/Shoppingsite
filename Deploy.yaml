@@ -1,0 +1,27 @@
+-
+ name: Deployment
+ hosts: "{{env}}"
+ become: yes
+ tasks:
+
+    - name: Start docker in remote server
+      shell: systemctl start docker
+
+    - name: stopping container
+      shell: docker stop shopping
+      ignore_errors: yes
+
+    - name: delete container
+      shell: docker rm shopping
+      ignore_errors: yes
+
+    - name: delete image
+      shell: docker rmi rohansarkar007/shopping
+      ignore_errors: yes
+    
+    - name: pull image from dockerhub
+      shell: docker pull rohansarkar007/shopping
+   
+    - name: Create container
+      shell: docker run -d --name ecomapp -p 8085:8080 rohansarkar007/shopping
+
