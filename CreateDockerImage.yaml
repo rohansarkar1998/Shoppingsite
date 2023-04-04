@@ -21,7 +21,7 @@
 #      shell: docker build -t ecomapp .
     
     - name: Push Docker Image to Docker hub
-      shell: docker push rohansarkar007/ecomapp
+      shell: docker push rohansarkar007/shopping
      
         #    - name: create container from image
         #      shell: docker run -d --name ecomapp -p 8082:8080 ecomapp
