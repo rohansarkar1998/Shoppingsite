@@ -5,9 +5,10 @@
 	<class>com.OnlineShopping.Transaction</class>
 	<class>com.OnlineShopping.Manager</class>
 	<properties> 
-   			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://192.168.0.7:3306/sys" />
-			<property name="javax.persistence.jdbc.user" value="app" />
-			<property name="javax.persistence.jdbc.password" value="password" />
+   			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://database-1.cxivgmahzucr.ap-south-1.rds.amazonaws.com:3306/ecom" />
+			<property name="javax.persistence.jdbc.user" value="admin" />
+			<property name="javax.persistence.jdbc.password" value="osboxes.org" />
+			<property name="javax.persistence.schema-generation.database.action" value="none"/>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
        </properties>
    </persistence-unit>
