@@ -1,3 +1,3 @@
 FROM jboss/wildfly
-COPY executable.war /opt/jboss/wildfly/standalone/deployments
+COPY EcommerceProject.war /opt/jboss/wildfly/standalone/deployments
 
